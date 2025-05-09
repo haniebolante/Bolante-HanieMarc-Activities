@@ -1,0 +1,47 @@
+body{
+    background-color:violet;
+    }
+.guess{
+
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    border: 2px solid green ;
+    border-radius: 10%;
+    padding: 55px;
+    background-color:green;
+    text-align: center;
+}
+h1{
+    color: aquamarine;
+    font-size: 50px;
+    font-family: sans-serif;
+}
+input{
+    width: 200px;
+    height: 35px;
+    background-color: violet;
+    color: azure;
+    font-family: sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid blue;
+}
+
+input:hover{
+    background-color: antiquewhite;
+    color:blueviolet ;
+
+}
+button{
+    width: 210px;
+    height: 35px;
+    background-color:blueviolet;
+    font-family: sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid pink;
+}
+button:hover{
+    background-color: blueviolet;
+}
