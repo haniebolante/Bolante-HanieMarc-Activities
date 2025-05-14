@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Account | Inventory</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+</head>
+<body>
+    <div class="register-container">
+        <div class="brand-section">
+            <h1 class="brand-title">Inventory System</h1>
+            <p class="brand-tagline">Student Inventory</p>
+            <div class="decorative-element"></div>
+        </div>
+        
+        <div class="register-card">
+            <h2 class="text-center">Create Account</h2>
+            
+            <div class="text-center mb-3">
+                <span id="message" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control inp" id="username" placeholder="Enter your username">
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control inp" id="password" placeholder="Enter your password">
+            </div>
+
+            <div class="form-group">
+                <label for="confirm_password" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control inp" id="confirm_password" placeholder="Confirm your password">
+            </div>
+
+            <button class="btn btn-gold" onclick="register()">Create Account</button>
+
+            <div class="login-link">
+                <span>Already have an account?</span>
+                <a href="/" class="text-accent">Sign In</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/register.js') }}"></script>
+</body>
+</html>

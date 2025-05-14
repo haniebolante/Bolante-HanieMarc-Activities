@@ -1,0 +1,145 @@
+body {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.register-container {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    margin: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.brand-section {
+    flex: 1;
+    background: linear-gradient(135deg, #0d6efd 0%, #084298 100%);
+    color: white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brand-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.brand-tagline {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.decorative-element {
+    width: 50px;
+    height: 4px;
+    background: rgba(255,255,255,0.5);
+    margin-top: 2rem;
+}
+
+.register-card {
+    flex: 1;
+    padding: 3rem;
+    background: white;
+}
+
+.register-card h2 {
+    font-family: 'Playfair Display', serif;
+    color: #212529;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    font-size: 0.875rem;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    font-size: 0.95rem;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #0d6efd;
+}
+
+.btn-gold {
+    background: #0d6efd;
+    color: white;
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    background: #084298;
+    transform: translateY(-1px);
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.text-accent {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.text-accent:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register-container {
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    .brand-section {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .brand-title {
+        font-size: 2rem;
+    }
+
+    .decorative-element {
+        margin: 1.5rem auto 0;
+    }
+
+    .register-card {
+        padding: 2rem;
+    }
+}   

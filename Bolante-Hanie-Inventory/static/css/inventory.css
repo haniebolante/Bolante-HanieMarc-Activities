@@ -1,0 +1,165 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.sidebar {
+    background: linear-gradient(180deg, #2C3E50 0%, #34495E 100%);
+    color: white;
+    width: 280px;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 280px;
+    padding: 2rem;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    transition: margin-left 0.3s ease;
+}
+
+.search-container {
+    background: linear-gradient(180deg, #2C3E50 0%, #34495E 100%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.search-container .form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+}
+
+.search-container .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    padding: 1rem;
+}
+
+.table td {
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s;
+}
+
+.btn-warning {
+    background-color: #f39c12;
+    border-color: #f39c12;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+/* Mobile Navigation Toggle Button */
+.nav-toggle {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+    background: #2C3E50;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        width: 250px;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    /* Adjust table for mobile */
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .table td, .table th {
+        min-width: 100px;
+        padding: 0.5rem;
+    }
+
+    /* Stack buttons on mobile */
+    .bbtn {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Adjust search container */
+    .search-container {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Overlay for mobile when sidebar is open */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .overlay.active {
+        display: block;
+    }
+}
